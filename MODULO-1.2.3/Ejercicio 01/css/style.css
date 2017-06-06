@@ -1,0 +1,58 @@
+/**
+ *  en HTML5 se utiliza *::before y *::after, pero para ser seguros de cubrir
+ *  el 100% de los navegadores utilizo también el *:before, *:after
+ *  con esta tecnica es seguro al 100% que toda la pagina asume ese valor
+ */
+
+*, *::before, *::after, *:before, *:after{
+    box-sizing: border-box;
+}
+body{
+    color: #434545;
+}
+h1, h2{
+    font-weight: bold;
+    padding: 2px;
+    margin: 2px;
+}
+
+header{
+    margin-bottom: 2%;
+    display: flex;
+    justify-content: space-between;
+}
+
+nav>ul, .wrap{
+    display: flex;
+}
+nav>ul>li{
+    padding: 2px;
+    margin: 2px;
+    border: solid 1px crimson;
+}
+nav>ul>li:hover{
+    background-color: crimson;
+    color: white;
+}
+nav>ul:first-child{
+    margin-left: 0;
+}
+nav>ul:last-child{
+    margin-right: 0;
+}
+
+footer{
+    margin-top: 2%;
+    padding-top: 2%;
+}
+
+.container{
+    width: 90%;
+    margin: 2em auto;
+}
+.articles{
+    width: 70%;
+}
+.asides{
+    width: 30%;
+}
