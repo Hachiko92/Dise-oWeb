@@ -1,0 +1,23 @@
+/**
+ *  en HTML5 se utiliza *::before y *::after, pero para ser seguros de cubrir
+ *  el 100% de los navegadores utilizo también el *:before, *:after
+ *  con esta tecnica es seguro al 100% que toda la pagina asume ese valor
+ */
+
+*, *::before, *::after, *:before, *:after{
+    box-sizing: border-box;
+}
+
+section.grid{
+    display: -ms-grid;
+    -ms-grid-rows: 1fr 2fr 1fr;
+    -ms-grid-columns: 1fr 2fr 1fr;  
+}
+
+section.grid > div > div {
+    border: 1px solid;
+}
+
+section.grid > div > div:nth-child(2) {-ms-grid-row: 1; -ms-grid-column: 2;}
+section.grid > div > div:nth-child(3) {}
+section.grid > div > div:nth-child(4) {}
