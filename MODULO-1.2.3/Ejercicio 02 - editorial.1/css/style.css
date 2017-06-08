@@ -121,34 +121,21 @@ article h4, article p{
 }
 /* ******* fin menù ******* */
 
-/* ******* menù mobil ******* */
-.mobile {
-    position: relative;
-    /*left: 0;
-    top: 30%;*/
+/* ******* menù footer ******* */
+
+.temporal{
     display: none;
 }
-.mobile img{
-    height: auto 0;
+.temporal ul{
+    display: flex;
+    flex-direction: column;
 }
-.mobile ul ul{
-    width: auto;
-    margin: 5px 10px;
-    display: none;
+.temporal li:hover{
     background-color: white;
-    border: 1px solid;
-    left: 0;
-    
-}
-.mobile>ul>li:hover {
-    background-color: white;
-}
-.mobile li:hover ul{
-    display: block;
-    position: absolute;
+    color: #434545;
 }
 
-/* ******* fin menù ******* */
+/* ******* fin menù footer ******* */
 
 @media screen and (max-width: 600px){
     .container {
@@ -166,10 +153,10 @@ article h4, article p{
         -moz-column-count: 1;
         column-count: 1;
     }
-    nav{
+    .principal{
         display: none;
     }
-    .mobile {
+    .temporal {
         display: block;
     }
     header{
