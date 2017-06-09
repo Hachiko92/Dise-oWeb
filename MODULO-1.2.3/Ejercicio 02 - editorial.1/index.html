@@ -5,7 +5,7 @@
     <head>
         
         <meta charset="utf-8">
-        <title>Diseño Web</title>
+        <title>Editorial</title>
         <meta name="author" content="Eleonora">
         <meta name="keywords" content="">
         <meta name="description" content="">
@@ -16,6 +16,10 @@
         <!-- ********** CSS ********** -->
         <link rel="stylesheet" type="text/css" href="css/reset.css">
         <link rel="stylesheet" type="text/css" href="css/style.css">
+        <!-- ********** JQuery ********** -->
+        <script type="text/javascript" src="jquery/jquery.js"></script>
+        <!-- ********** JavaScript ********** -->
+        <script type="text/javascript" src="js/main.js"></script>
 
     </head>
     <body>
@@ -23,16 +27,16 @@
 
         <div class="container">
 
-        <header class="principal">
-            <h1>Tu quoque, Brute, fili mi!</h1>
-            <nav>
+        <header>
+            <h1>ELIO</h1>
+            <nav class="principal">
                 <ul>
-                    <li>Home</li>
+                    <a href="#"><li>Home</li></a>
                     <li>Libros
                         <ul>
                             <li>Novedades</li>
                             <li>Los más vendidos</li>
-                            <li>Todos</li>
+                            <li>categorías</li>
                             <li>Proximamente</li>
                         </ul>
                     </li>
@@ -40,7 +44,35 @@
                         <ul>
                             <li>Novedades</li>
                             <li>Los más vendidos</li>
-                            <li>Todos</li>
+                            <li>categorías</li>
+                            <li>Proximamente</li>
+                        </ul>
+                    </li>
+                    <a href="#"><li>Promociones</li></a>
+                    <a href="#"><li>Tiendas</li></a>
+                </ul>
+            </nav>
+            
+            <div id="btnMenu" class="btnMobile">
+                <img src="img/iconaOpen.png" alt="icona por el menù" id="btnMenuImage">
+            </div>
+        </header>
+            <nav class="mobile oculto" id="menuMobile">
+                <ul>
+                    <li>Home</li>
+                    <li class="desplegable">Libros
+                        <ul class="mobile2nivel">
+                            <li>Novedades</li>
+                            <li>Los más vendidos</li>
+                            <li>categorías</li>
+                            <li>Proximamente</li>
+                        </ul>
+                    </li>
+                    <li class="desplegable">Ebooks
+                        <ul class="mobile2nivel">
+                            <li>Novedades</li>
+                            <li>Los más vendidos</li>
+                            <li>categorías</li>
                             <li>Proximamente</li>
                         </ul>
                     </li>
@@ -48,10 +80,6 @@
                     <li>Tiendas</li>
                 </ul>
             </nav>
-            <nav class="mobile">
-                <img src="img/iconaMenu.png" alt="icona por el menù">
-            </nav>
-        </header>
 
             <div class="wrap">
                 
@@ -61,7 +89,8 @@
                         <h3>Os ofrecemos una selección de algunos de los mejores libros de la historia. No es un ránking, 
                             pero están (casi) todos los imprescindibles. Lecturas ideales para recuperar en verano.</h3>
 
-                        <img src="img/libros01.jpg">
+                        <img src="img/libros01.jpg" alt="Las portadas de cinco libros: 1984, Cien años de soledad,
+                             El Conde de Montecristo, Crimen y castigo y La Divina comedia.">
                         <p>
                             <span class="spanParrafo">1984, de George Orwell</span>
                             <br><br>
@@ -166,17 +195,18 @@
 
         </div>
         <footer>
-            <address>Written by Eleonora Franchini</address>
-            <div class="temporal">
-                ccciaaaaoooo
+
+            <div class="temporal" id="menuTemporal">
                 <ul>
                     <li>Home</li>
                     <li>Libros</li>
                     <li>Ebooks</li>
                     <li>Promociones</li>
-                    <li>Tiendas</li>
+                    <li>Tiendas</li> 
                 </ul>
             </div>
+            <address>Written by Eleonora Franchini</address>
+            
         </footer>
 
     </body>

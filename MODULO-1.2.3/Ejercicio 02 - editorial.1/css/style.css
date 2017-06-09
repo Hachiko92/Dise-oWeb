@@ -98,7 +98,8 @@ article h4, article p{
     transition-duration: 0.5s;
     padding: 2px 5px;
 }
-.principal li:hover{
+.principal li:hover, .mobile li:hover{
+    background-color: #ddd;
     background-image: url("../img/stripe.png");
     background-repeat: repeat-xy;
 }
@@ -107,6 +108,10 @@ article h4, article p{
 }
 .principal>ul>li:last-child{
     margin-right: 0;
+}
+
+.principal>ul>li ul>li{
+    margin-bottom: 5px;
 }
 
 .principal ul>li ul{
@@ -119,7 +124,33 @@ article h4, article p{
     display: block;
     position: absolute;
 }
+
+li:hover{
+    pointer-events: 
+}
 /* ******* fin menù ******* */
+
+/* ******* menù mobile ******* */
+.btnMobile {
+    display: none;
+}
+
+.oculto {
+    display: none;
+}
+
+.mobile ul {
+    list-style-type: none;
+    width: 100%;
+    border-bottom: 1px solid;
+    text-align: center;
+}
+
+/* .mobile li:hover està con .principal li:hover */
+
+.mobile li>ul {
+    display: none;
+}
 
 /* ******* menù footer ******* */
 
@@ -156,15 +187,19 @@ article h4, article p{
     .principal{
         display: none;
     }
-    .temporal {
+    .temporal, .btnMobile {
         display: block;
+    }
+    .mobile, .temporal {
+        margin-bottom: 20px;
     }
     header{
         display: flex;
         justify-content: space-between;
+        margin-bottom: 5px;
+        align-items: center;
     }
     h1 {
-        font-size: 20px;
         text-align: left;
     }
 }
