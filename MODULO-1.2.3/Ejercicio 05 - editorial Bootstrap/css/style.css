@@ -1,0 +1,14 @@
+/**
+ *  en HTML5 se utiliza *::before y *::after, pero para ser seguros de cubrir
+ *  el 100% de los navegadores utilizo también el *:before, *:after
+ *  con esta tecnica es seguro al 100% que toda la pagina asume ese valor
+ */
+
+*, *::before, *::after, *:before, *:after{
+    box-sizing: border-box;
+}
+body{
+    color: #434545;
+    font-size: 16px;
+}
+

@@ -7,12 +7,14 @@
         <meta charset="utf-8">
         <title>Editorial</title>
         <meta name="author" content="Eleonora">
-        <meta name="keywords" content="">
-        <meta name="description" content="">
+        <meta name="keywords" content="editorial, test, practica">
+        <meta name="description" content="Practica: creal la pagina de una editorial">
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
         
         <!-- ********** icona **********  -->
         <link rel="shortcut icon" href="icona.ico">
+        <!-- ********** Google Font ********** -->
+        <link href="https://fonts.googleapis.com/css?family=Merriweather" rel="stylesheet">
         <!-- ********** CSS ********** -->
         <link rel="stylesheet" type="text/css" href="css/reset.css">
         <link rel="stylesheet" type="text/css" href="css/style.css">
@@ -26,30 +28,32 @@
         
 
         <div class="container">
-
-        <header>
+        
+        <!-- utilizo el role="" de ARIA para definir las funciones de los componientes,
+             facilitando asì la accesibilidad -->
+        <header role="heading">
             <h1>ELIO</h1>
-            <nav class="principal">
+            <nav role="Navigation"class="principal">
                 <ul>
-                    <a href="#"><li>Home</li></a>
+                    <a href="#" role="link"><li>Home</li></a>
                     <li>Libros
                         <ul>
-                            <li>Novedades</li>
-                            <li>Los más vendidos</li>
-                            <li>categorías</li>
-                            <li>Proximamente</li>
+                            <a href="#" role="link"><li>Novedades</li></a>
+                            <a href="#" role="link"><li>Los más vendidos</li></a>
+                            <a href="#" role="link"><li>categorías</li></a>
+                            <a href="#" role="link"><li>Proximamente</li></a>
                         </ul>
                     </li>
                     <li>Ebooks
                         <ul>
-                            <li>Novedades</li>
-                            <li>Los más vendidos</li>
-                            <li>categorías</li>
-                            <li>Proximamente</li>
+                            <a href="#" role="link"><li>Novedades</li></a>
+                            <a href="#" role="link"><li>Los más vendidos</li></a>
+                            <a href="#" role="link"><li>categorías</li></a>
+                            <a href="#" role="link"><li>Proximamente</li></a>
                         </ul>
                     </li>
-                    <a href="#"><li>Promociones</li></a>
-                    <a href="#"><li>Tiendas</li></a>
+                    <a href="#" role="link"><li>Promociones</li></a>
+                    <a href="#" role="link"><li>Noticias</li></a>
                 </ul>
             </nav>
             
@@ -57,40 +61,41 @@
                 <img src="img/iconaOpen.png" alt="icona por el menù" id="btnMenuImage">
             </div>
         </header>
-            <nav class="mobile oculto" id="menuMobile">
+            <!-- esto navegador aparecerá al diminuir de la plantalla (<) -->
+            <nav role="Navigation"class="mobile oculto" id="menuMobile">
                 <ul>
-                    <li>Home</li>
-                    <li class="desplegable">Libros
-                        <ul class="mobile2nivel">
-                            <li>Novedades</li>
-                            <li>Los más vendidos</li>
-                            <li>categorías</li>
-                            <li>Proximamente</li>
+                    <a href="#" role="link"><li>Home</li></a>
+                    <li class="desplegables">Libros
+                        <ul class="ulDesplegable">
+                            <a href="#" role="link"><li>Novedades</li></a>
+                            <a href="#" role="link"><li>Los más vendidos</li></a>
+                            <a href="#" role="link"><li>categorías</li></a>
+                            <a href="#" role="link"><li>Proximamente</li></a>
                         </ul>
                     </li>
-                    <li class="desplegable">Ebooks
-                        <ul class="mobile2nivel">
-                            <li>Novedades</li>
-                            <li>Los más vendidos</li>
-                            <li>categorías</li>
-                            <li>Proximamente</li>
+                    <li class="desplegables">Ebooks
+                        <ul class="ulDesplegable">
+                            <a href="#" role="link"><li>Novedades</li></a>
+                            <a href="#" role="link"><li>Los más vendidos</li></a>
+                            <a href="#" role="link"><li>categorías</li></a>
+                            <a href="#" role="link"><li>Proximamente</li></a>
                         </ul>
                     </li>
-                    <li>Promociones</li>
-                    <li>Tiendas</li>
+                    <a href="#" role="link"><li>Promociones</li></a>
+                    <a href="#" role="link"><li>Noticias</li></a>
                 </ul>
             </nav>
 
             <div class="wrap">
                 
                 <div class="articles">
-                    <article>
-                        <h2>LOS 5 MEJORES LIBROS DE LA HISTORIA</h2>
+                    <article role="article">
+                        <h2>Los cinco mejores libros de la historia</h2>
                         <h3>Os ofrecemos una selección de algunos de los mejores libros de la historia. No es un ránking, 
                             pero están (casi) todos los imprescindibles. Lecturas ideales para recuperar en verano.</h3>
 
-                        <img src="img/libros01.jpg" alt="Las portadas de cinco libros: 1984, Cien años de soledad,
-                             El Conde de Montecristo, Crimen y castigo y La Divina comedia.">
+                        
+                        
                         <p>
                             <span class="spanParrafo">1984, de George Orwell</span>
                             <br><br>
@@ -122,6 +127,11 @@
                             justificar humanitariamente un crimen, pero que al cometerlo verá cómo lo persigue 
                             la culpa.
                             <br><br>
+                            
+                            <!-- por la usabilidad cada imagen ha sido bajada en cualidad
+                                 para velocizar su carga -->
+                            <!-- utilizo el "alt" para describir la imagen a una persone que no puede ver -->
+                            <img src="img/libro01.jpg" alt="La portada de la Divina Comedia de Dante Alighieri.">
                             <span class="spanParrafo">La Divina comedia, de Dante</span>
                             <br><br>
                             Dividido en cánticas (Infierno, Purgatorio y Paraíso), Dante, Beatriz y Virgilio 
@@ -134,21 +144,16 @@
                         </p>
                     </article>
 
-                    <article>
-                        <h2>Lorem ipsum</h2>
+                    <article role="article">
+                        <h2>Ortega después de Ortega</h2>
+                        <h3>La reedición de las obras completas del filósofo invita a una lectura desprejuiciada que libere su pensamiento de la hibernación a la que fue condenado tras la guerra civil</h3>
+                        
                         <p>
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea asperiores possimus provident 
-                            non laudantium quo placeat exercitationem voluptatibus impedit soluta, tempore illum illo 
-                            eum sapiente debitis minima, odio! Dicta, nostrum.
+                            <img src="img/ortega.jpg" alt"Una foto de Ortega">
+                            El próximo número de Babelia dedica su portada a José Ortega y Gasset con motivo de la reedición de sus obras completas. Dos artículos profundizan en su figura: uno del filósofo José Luis Pardo y otro de Jordi Gracia, autor de una detallada biografía del pensador.
                         </p>
                         <p>
-                            Integer sapien ex, euismod vitae ultrices a, tempor vitae tortor. Integer et maximus orci, 
-                            et commodo tellus. Donec euismod pretium erat, finibus tempor magna volutpat eu. Nunc 
-                            convallis eu orci et pellentesque. Etiam vulputate interdum eleifend. Proin vel placerat 
-                            turpis. Praesent ac mattis felis. Cras mattis fermentum sem vel vehicula. Cras lacus quam, 
-                            varius aliquam congue non, consectetur eu mauris. Nullam eget dictum ex, non hendrerit magna. 
-                            Nullam at enim iaculis, fermentum turpis in, lobortis quam. Morbi felis eros, dictum eu mollis 
-                            vel, volutpat vel tellus. Ut vitae gravida arcu.
+                            “Si las cosas hubieran seguido su curso natural, el pensamiento de Ortega y Gasset habría envejecido como los buenos vinos, entre la crítica constante de sus lectores y colegas, y se habría transmitido como una lectura normalizada a las generaciones siguientes. Pero la guerra (civil primero, después mundial) destruyó por completo aquel mundo y abortó esta posibilidad”, escribe Pardo. “No diré que sería hoy un tuitero compulsivo, pero la proliferación de aforismos con chispa e intención podrían tenerlo como aficionado decoroso al medio guerrillero. Ese fue Ortega hasta sus treintaytantos: un hombre cercano a un socialismo autogestionado, convencido del desfondamiento ruinoso del mundo en el que había nacido y al que despreciaba sin reservas”, apunta Gracia.
                         </p>
                         <p>
                             Donec imperdiet justo sed ipsum tempus, in feugiat arcu scelerisque. Pellentesque mollis dolor 
@@ -171,22 +176,25 @@
                 <div class="asides">
                 
                     <aside>
-                        <h2>Noticias</h2>
+                        <h2>Ultima noticia</h2>
+                        <h3>Los Mejores Libros De Fotografía</h2>
+                        <img src="img/fotografia.jpg" alt"Foto de la portada del libro Leer de André Kertész ">
                         <p>
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora dolores, reiciendis repellat illo mollitia doloremque eaque molestias corrupti qui voluptatem dolorum veritatis, aliquid aperiam quo officia minus iusto sint a.
+                            Si realizas una búsqueda rápida en internet, te darás cuenta que la cantidad de libros disponibles acerca de este arte es abismal. Año a año, la cantidad y variedad de manuales, libros y artículos que se publican es abismal, lo que puede hacer que, si estás dando tus primeros pasos, no tengas bien en claro por donde comenzar.
+                            <br><br>
+                            <a role="link" href="#"> <span>Leer más</span> </a>
                         </p>
                     </aside>
 
                     <aside>
                         <h2>Enlaces de interès</h2>
-                        <p>
+                        
                             <ul>
-                                <li>enlace 1</li>
-                                <li>enlace 2</li>
-                                <li>enlace 3</li>
-                                <li>enlace 4</li>
+                                <a href="http://ferialibromadrid.com/" role="link"><li>Feira del libro Madrid</li></a>
+                                <a href="http://firallibre.com/?lang=es/" role="link"><li>Feira del libro Valencia</li></a>
+                                <a href="http://ferialibrosevilla.com/" role="link"><li>Feira del libro Sevilla</li></a>
                             </ul>
-                        </p>
+                        
                     </aside>
 
                 </div>
@@ -196,16 +204,52 @@
         </div>
         <footer>
 
+            <div class="footerLink">
+                <div>
+                    <a href="#" role="link"><h3>QUIEN SOMOS</h3></a>
+                    <!-- en la versión para el movil los ul desaparecen,
+                         el link principal va a una pagina donde estarán tambien los links
+                         contenidos en ul -->
+                    <ul class="ulFooter">
+                        <a href="#" role="link"><li>El grupo Elio</li></a>
+                        <a href="#" role="link"><li>Tiendas y librerías</li></a>
+                        <a href="#" role="link"><li>Oficina de prensa</li></a>
+                        <a href="#" role="link"><li>La nuestra oferta</li></a>
+                        <a href="#" role="link"><li>Trabaja con nosotros</li></a>
+                    </ul>
+                </div>
+                <div>
+                    <a href="#" role="link"><h3>SERVICIOS</h3></a>
+                    <ul class="ulFooter">
+                        <a href="#" role="link"><li>Envio</li></a>
+                        <a href="#" role="link"><li>Pagamientos</li></a>
+                        <a href="#" role="link"><li>Enviar regalos</li></a>
+                        <a href="#" role="link"><li>Prenota en la tienda</li></a>
+                        <a href="#" role="link"><li>Gift Card Elio</li></a>
+                    </ul>
+                </div>
+                <div>
+                    <a href="#" role="link"><h3>AYUDA</h3></a>
+                    <ul class="ulFooter">
+                        <a href="#" role="link"><li>FAQ</li></a>
+                        <a href="#" role="link"><li>Estado del orden</li></a>
+                        <a href="#" role="link"><li>Contactos</li></a>
+                    </ul>
+                </div>
+            </div>
+            <!-- creacción de un menu temporal, se visualiza hasta que no carge el JavaScript -->
             <div class="temporal" id="menuTemporal">
                 <ul>
-                    <li>Home</li>
-                    <li>Libros</li>
-                    <li>Ebooks</li>
-                    <li>Promociones</li>
-                    <li>Tiendas</li> 
+                    <a href="#" role="link"><li>Home</li></a>
+                    <!-- como es un menú temporaneo, Libros y Ebooks mandan a las relativas
+                         paginas de busqueda de productos (categorías) -->
+                    <a href="#" role="link"><li>Libros</li></a>
+                    <a href="#" role="link"><li>Ebooks</li></a>
+                    <a href="#" role="link"><li>Promociones</li></a>
+                    <a href="#" role="link"><li>Noticias</li></a> 
                 </ul>
             </div>
-            <address>Written by Eleonora Franchini</address>
+            <small>Copyright 2001-2017 Elio s.p.a.</small>
             
         </footer>
 

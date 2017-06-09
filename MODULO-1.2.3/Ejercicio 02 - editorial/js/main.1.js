@@ -5,8 +5,12 @@ function menu(){
 
   btnMenu.addEventListener("click", desplegar);
 
+  console.log(desplegableItem);
+  console.dir(desplegableItem);
   for (let i = 0; i<desplegableItem.length ; i++){
     desplegableItem[i].addEventListener("click", desplearItem);
+    desplegableItem[i].addEventListener("mouseover", desplearItem);
+    desplegableItem[i].addEventListener("mouseout", desplearItem);
   }
 }
 
@@ -23,7 +27,9 @@ function desplegar(){
 
 function desplearItem(oEvent){
   let oEventChild = oEvent.target.children;
-  oEventChild[0].classList.toggle("ulDesplegable");
+  console.log(oEventChild);
+  console.dir(oEventChild);
+  oEventChild[0].classList.toggle("block");
 }
 
 $(function (){
