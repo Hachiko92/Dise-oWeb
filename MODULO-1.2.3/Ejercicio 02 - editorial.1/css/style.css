@@ -224,6 +224,13 @@ article img {
     .mobile, .temporal {
         margin-bottom: 20px;
     }
+    .articles {
+        display: flex;
+        flex-direction: column;
+    }
+    article {
+        width: 100%;
+    }
     header{
         display: flex;
         justify-content: space-between;
