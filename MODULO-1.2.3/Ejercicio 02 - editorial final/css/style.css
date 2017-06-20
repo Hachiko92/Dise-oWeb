@@ -224,10 +224,6 @@ article img {
     .mobile, .temporal {
         margin-bottom: 20px;
     }
-    .articles {
-        display: flex;
-        flex-direction: column;
-    }
     article {
         width: 100%;
     }
@@ -254,5 +250,9 @@ article img {
     .container, .footer {
         width: 100%;
         padding: 10px;
+    }
+    .articles {
+        display: flex;
+        flex-direction: column;
     }
 }
