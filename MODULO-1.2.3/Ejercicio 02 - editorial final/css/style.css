@@ -85,7 +85,7 @@ aside{
 }
 aside img{
     float: right;
-    margin-left: 10px;
+    margin: 0 10px;
 }
 
 p {
@@ -224,9 +224,6 @@ article img {
     .mobile, .temporal {
         margin-bottom: 20px;
     }
-    article {
-        width: 100%;
-    }
     header{
         display: flex;
         justify-content: space-between;
@@ -254,5 +251,11 @@ article img {
     .articles {
         display: flex;
         flex-direction: column;
+    }
+    article {
+        width: 100%;
+    }
+    aside img{
+        width: 80%;
     }
 }
