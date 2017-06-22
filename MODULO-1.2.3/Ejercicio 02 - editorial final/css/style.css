@@ -87,6 +87,9 @@ aside img{
     float: right;
     margin: 0 10px;
 }
+aside a:hover{
+    color: black;
+}
 
 p {
     margin: 20px 0;
@@ -105,13 +108,13 @@ article img {
     margin-bottom: 20px;
     text-align: left;
 }
-
 .footerLink h3, .footerLink a{
     color: white;
+    list-style-position: inside;
+    list-style-type: none;
 }
-
-.footerLink a:hover{
-    background-color: black;
+.footerLink h3:hover, .footerLink a:hover{
+    color: #999;
 }
 
 /* ******* menù ******* */
@@ -132,7 +135,7 @@ article img {
     transition-duration: 0.5s;
     padding: 2px 5px;
 }
-.principal li:hover, .mobile li:hover, a:hover{
+.principal li:hover, .mobile li:hover{
     background-color: #ddd;
     background-image: url("../img/stripe.png");
     background-repeat: repeat-xy;
